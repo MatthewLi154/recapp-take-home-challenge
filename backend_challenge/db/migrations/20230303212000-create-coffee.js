@@ -19,6 +19,9 @@ module.exports = {
       caffine_content: {
         type: Sequelize.FLOAT,
         allowNull: false
+      },
+      caffine_percentage: {
+        type: Sequelize.FLOAT
       }
     })
   },
