@@ -7,6 +7,7 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
+        autoIncrement: true
       },
       name: {
         type: Sequelize.VARCHAR(50),
@@ -20,9 +21,16 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: false
       },
-      // caffine_percentage: {
-      //   type: Sequelize.FLOAT
-      // }
+      caffine_percentage: {
+        type: Sequelize.FLOAT,
+        allowNull: false,
+      },
+      createdAt: {
+        type: Sequelize.DATETIME
+      },
+      updatedAt: {
+        type: Sequelize.DATETIME
+      }
     })
   },
 
@@ -33,5 +41,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
+    await queryInterface.dropTable("coffees")
   }
 };
