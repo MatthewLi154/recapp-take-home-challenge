@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Coffee.init(
     {
-      id: DataTypes.INTEGER,
       name: DataTypes.STRING,
       year: DataTypes.INTEGER,
       caffine_content: DataTypes.FLOAT,
